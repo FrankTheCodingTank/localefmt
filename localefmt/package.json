@@ -1,0 +1,12 @@
+{
+  "name": "localefmt",
+  "version": "0.3.1",
+  "description": "Locale-aware phone, date, and address formatting",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node tests/phone.test.js && node tests/date.test.js"
+  },
+  "keywords": ["locale", "i18n", "phone", "date", "format"],
+  "license": "MIT"
+}
