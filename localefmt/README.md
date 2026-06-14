@@ -15,7 +15,6 @@ import { formatPhone, formatDate, formatAddress } from 'localefmt';
 
 // Phone formatting
 formatPhone('+14165550137', 'en-CA');  // → (416) 555-0137
-formatPhone('+14165550137', 'en-CA', { includeCode: true });  // → +1 (416) 555-0137
 formatPhone('+442071234567', 'en-GB'); // → 020 7123 4567
 
 // Date formatting
@@ -44,9 +43,9 @@ formatAddress({
 | de-DE  | ✅    | ✅   | ⚠️ partial |
 | ja-JP  | ✅    | ✅   | ⚠️ partial |
 
-## Phone Round-Tripping
+## Known Issues
 
-Use `formatPhone(number, locale, { includeCode: true })` when formatting shared calling-code regions such as `+1` so `parsePhone` can round-trip the original E.164 number.
+See [#14](../../issues/14) — phone formatting drops country code prefix for locales with shared calling codes (e.g., +1 for US/CA). Working on a fix.
 
 ## Contributing
 
